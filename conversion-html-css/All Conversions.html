@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Celsius to Fahrenheit Conversion</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2 class="title">Celsius to Fahrenheit Conversion</h2>
+        <label for="celsius">Enter temperature in Celsius:</label>
+        <br>
+        <input type="number" id="celsius" placeholder="Celsius" class="input-field">
+        <br>
+        <button onclick="convert()" class="convert-button">Convert</button>
+        <br>
+        <p id="result" class="result"></p>
+    </div>
+
+
+
+    <div class="container">
+        <h2 class="title">Fahrenheit to Celsius Conversion</h2>
+        <label for="Fahrenheit">Enter temperature in Fahrenheit:</label>
+        <br>
+        <input type="number" id="fahrenheit1" placeholder="fahrenheit" class="input-field">
+        <br>
+        <button onclick="convert1()" class="convert-button">Convert</button>
+        <br>
+        <p id="result1" class="result"></p>
+    </div>
+
+
+
+    <div class="container">
+        <h2 class="title">Celsius to Kelvin</h2>
+        <label for="celsius">Enter temperature in celsius:</label>
+        <br>
+        <input type="number" id="celsius2" placeholder="celsius" class="input-field">
+        <br>
+        <button onclick="convert2()" class="convert-button">Convert</button>
+        <br>
+        <p id="result2" class="result"></p>
+    </div>
+
+
+    <div class="container">
+        <h2 class="title">Kelvin to Celsius</h2>
+        <label for="celsius">Enter temperature in kelvin:</label>
+        <br>
+        <input type="number" id="kelvin3" placeholder="kelvin" class="input-field">
+        <br>
+        <button onclick="convert3()" class="convert-button">Convert</button>
+        <br>
+        <p id="result3" class="result"></p>
+    </div>
+
+
+    <div class="container">
+        <h2 class="title">fahrenheit to kelvin:</h2>
+        <label for="fahrenheit">Enter temperature in fahrenheit:</label>
+        <br>
+        <input type="number" id="fahrenheit4" placeholder="fahrenheit" class="input-field">
+        <br>
+        <button onclick="convert4()" class="convert-button">Convert</button>
+        <br>
+        <p id="result4" class="result"></p>
+
+    </div>
+
+
+    <div class="container">
+        <h2 class="title">Kelvin to Fahrenheit:</h2>
+        <label for="fahrenheit">Enter temperature in kelvin:</label>
+        <br>
+        <input type="number" id="kelvin5" placeholder="kelvin" class="input-field">
+        <br>
+        <button onclick="convert5()" class="convert-button">Convert</button>
+        <br>
+        <p id="result5" class="result"></p>
+    </div>
+
+            
+
+    <script>
+        function convert(){
+            let celsius = Number(document.getElementById("celsius").value)
+            const fahrenheit = (celsius * 9/5)+32;
+            const result = document.getElementById("result")
+            result.innerHTML = fahrenheit.toFixed(3)+ "fahrenheit"
+
+        }
+
+        function convert1(){
+            let fahrenheit = Number(document.getElementById("fahrenheit1").value)
+            const celsius = (fahrenheit - 32) * (5/9);
+            const result1 = document.getElementById("result1")
+            result1.innerHTML = celsius.toFixed(3) + "celsius"
+        }
+
+        function convert2(){
+            let celsius2 = Number(document.getElementById("celsius2").value)
+            const kelvin = celsius2 + 273.15;
+            const result2 = document.getElementById("result2")
+            result2.innerHTML = kelvin.toFixed(3) + "kelvin"
+        }
+
+        function convert3(){
+            let kelvin3 = Number(document.getElementById("kelvin3").value)
+            const celsius3 = kelvin3 - 273.15
+            const result3 = document.getElementById("result3")
+            result3.innerHTML = celsius3.toFixed(3)+ "celsius"
+        }
+
+        function convert4(){
+            let fahrenheit4 = Number(document.getElementById("fahrenheit4").value)
+            const kelvin4 = (fahrenheit4 + 459.67) * (5/9)
+            const result4 = document.getElementById("result4")
+            result4.innerHTML = kelvin4.toFixed(3)+ "kelvin"
+        }
+
+        function convert5(){
+            let kelvin5 = Number(document.getElementById("kelvin5").value)
+            const fahrenheit5 = (kelvin5 * (9/5)) - 459.67
+            const result5 = document.getElementById("result5")
+            result5.innerHTML = fahrenheit5.toFixed(3) + "fahrenheit"
+        }
+    </script>
+</body>
+</html>
